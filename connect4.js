@@ -1,3 +1,7 @@
+// WORK IN PROGRESS
+// Refactoring Connect Four game using JS classes and OOP
+// Springboard Project 12.2.10
+
 /** Connect Four
  *
  * Player 1 and 2 alternate turns. On each turn, a piece is dropped down a
@@ -11,11 +15,11 @@ const HEIGHT = 6;
 // let currPlayer = 1; // active player: 1 or 2
 // let board = []; // array of rows, each row is array of cells  (board[y][x])
 
-// TODO - add event listening/handle clicks
+// TODO - handle clicks in Game class
 class Game {
   constructor(height, width) {
     board : new Board(height, width);
-    currPlayer : 1
+    currPlayer : 1 // active player: 1 or 2
   }
 
   /** findSpotForCol: given column x, return top empty y (null if filled) */
@@ -35,7 +39,7 @@ class Game {
     spot.append(piece);
   }
 
-  // add switchPlayer
+  // TODO add switchPlayer
 
   /** endGame: announce game end */
   endGame(msg) {
@@ -287,6 +291,9 @@ function checkForWin() {
     }
   }
 }
+
+
+// Adds functionality for a button to begin a new game
 
 function resetGame() {
   if (board !== []) {
